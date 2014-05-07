@@ -1,16 +1,15 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
-  <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<title>PublicizeIT</title>
 </head>
 
 <body>
-{{>index}}
+{{>home}}
 </body>
 
-<template name="index">
+<template name="home">
     <div class="content">
     <nav class="navbar navbar-default navbar-rights" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,7 +61,7 @@
 
       <p>
         <label for='name'>Enter Name: </label><br>
-        <input type="text" name="name">
+        <input type="text" name="name" class="name">
       </p>
       <div class="pull-right">
             <strong>PublicizeIT</strong><br>
@@ -73,11 +72,11 @@
             </div>
       <p>
         <label for='email'>Enter Email Address:</label><br>
-        <input type="text" name="email">
+        <input type="text" name="email" class="email">
       </p>
       <p>
         <label for='message'>Enter Message:</label> <br>
-        <textarea name="message"></textarea>
+        <textarea name="message" class="message"></textarea>
       </p>
       <input class="auth" type="text" name="auth">
     </form>
@@ -87,21 +86,11 @@
 
 
             <div class="pull-left">
-            <button type="submit" name='submit' value="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" name='submit' value="submit" class="submit-form btn btn-primary">Submit</button>
+            <button type="button" class="closeButton btn btn-default" data-dismiss="modal">Close</button>
 
           </div>
           </div>
-
-    <script language="JavaScript">
-    // Code for validating the form
-    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-    // for details
-    var frmvalidator  = new Validator("myemailform");
-    frmvalidator.addValidation("name","req","Please provide your Whoolr name");
-    frmvalidator.addValidation("email","req","Please provide your email");
-    frmvalidator.addValidation("email","email","Please enter a valid email address");
-    </script>
 
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
